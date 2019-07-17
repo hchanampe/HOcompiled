@@ -1,0 +1,10 @@
+Despues de editar el archivo de C, para que pueda levantar la funcion de Fortran, hice lo siguiente:
+
+Compilar el archivo de C
+$ gcc -c c-main.c
+
+Compilar el archivo de Fortran
+$ gfortran -ffree-form -c f-sum.f90
+
+Generar el archivo ejecutable y el linkeo de los dos archivos objetos
+$gcc -o c-main.-gcc c-main.o f-sum.o -lgfortran
